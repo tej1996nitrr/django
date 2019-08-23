@@ -7,7 +7,7 @@ def index(request):
     webpages_list = AccessRecord.objects.order_by('date')
     date_dict = {"access_records": webpages_list}
     #my_dict={'insert_me':"hello i am from moved views.py"}
-    return render(request,'first_app/index.html',date_dict)
+    return render(request, 'first_app/index.html',date_dict)
 def form_name(request):
     form = forms.Formname()
     if request.method=="POST":
